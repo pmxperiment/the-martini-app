@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
+import UserLocGallery from '../components/UserLocGallery';
+import PostALocation from '../components/PostALocation';
+
+
 
 class User extends Component {
   render() {
     return (
-      <h2>
-        this is a user
-      </h2>
+      <div>
+
+        <div>
+          
+        </div>
+      <PostALocation/>
+        <div>
+          <UserLocGallery/>
+        </div>
+
+
+    </div>
     );
   }
 }

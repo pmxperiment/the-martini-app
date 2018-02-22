@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Pavanam');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body {
+  font-family: 'Pavanam', sans-serif;
+}
+
+#martini {
+  font-family: 'Permanent Marker', cursive;
+
+}
+
 .App {
   text-align: center;
+}
+
+.testing {
+text-decoration-line: underline;
 }
 
 .App-logo {
@@ -25,4 +41,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#newLoc_form{
+  text-align: right;
+  padding-right: 10px;
 }
