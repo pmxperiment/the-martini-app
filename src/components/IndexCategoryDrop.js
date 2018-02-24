@@ -4,11 +4,11 @@ class IndexCategoryDrop extends Component{
   render(){
     return (
           <div>
-            <div class="container">
-              <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Film Set Categories
-                <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
+            <div className="container">
+              <div className="dropdown">
+                <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Film Set Categories
+                <span className="caret"></span></button>
+                  <ul className="dropdown-menu">
                       <li><a href="#">Homes & Residences</a></li>
                       <li><a href="#">Businesses</a></li>
                       <li><a href="#">Rural Areas</a></li>

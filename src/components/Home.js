@@ -13,10 +13,9 @@ class Home extends Component {
   componentDidMount() {
     const REACT_APP_BACKEND_URL = 'http://localhost:8080';
     fetch(REACT_APP_BACKEND_URL + '/api/users').then((res) => {
-      return res.json();
     }).then((json) => {
       this.setState({Users:json});
-      console.log(this.state.Users);
+      console.log(this.setState.Users);
     })
   }
   render() {

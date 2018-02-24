@@ -5,11 +5,11 @@ class PostALocation extends Component {
   render() {
     return (
       <div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div className="dropdown">
+        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Create Another Film Set!
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <form >
                 <br />
                 <h3>Film Set Form</h3>
