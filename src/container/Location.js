@@ -4,30 +4,26 @@ class Location extends Component {
   constructor() {
     super();
     this.state = {
-      allMyLocations: []
+      location: {}
     }
   }
   componentDidMount() {
-    const REACT_APP_BACKEND_URL = 'http://localhost:8080';
-    fetch(REACT_APP_BACKEND_URL + '/api/locations')
-        .then(res => res.json())
-        .then(json => {
-          this.setState({allMyLocations: json});
-          console.log(this.state.allMyLocations);
-      // LOOK AT YOUR PAST FETCH REQUESTS (NEED RETURN RES.JSON)
-      // this.setState({Location:json});
-      // console.log(this.state.Location);
-    }).then((locationsJson) => {
-
-    })
+    // make a request to your API with the appropraite location id
+    // FETCH to /api/locations/1.json
+    // after fetching, set the state's location to be whatever you got back
   }
+
   render() {
+    console.log(this.props)
+    console.log(this.props.match.params.location_id)
     return (
+    <div>
       <h2>
-        this is a single location post for rent
-        { JSON.stringify(this.state.allMyLocations)}
+        this is a single location post for rent:
+        { JSON.stringify(this.state.location) }
       </h2>
-    );
+    </div>
+    )
   }
 }
 
