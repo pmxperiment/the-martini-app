@@ -22,7 +22,7 @@ class UserLocGallery extends Component {
             <PostALocation/>
             <div>
               <div className="container">
-                <h5 className="my-4 text-center text-lg-left">Available Set Locations</h5>
+                <h5 className="my-4 text-center text-lg-left">{this.state.User.name}'s Available Set Locations</h5>
                   <div className="row text-center text-lg-left">
                     {this.state.User.locations.map(eachLocation => {
                     return(
