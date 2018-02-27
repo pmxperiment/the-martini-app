@@ -30,9 +30,9 @@ class AllLocations extends Component {
           <div className="container">
             <h5 className="my-4 text-center text-lg-left">Available Set Locations</h5>
               <div className="row text-center text-lg-left">
-                {this.state.allMyLocations.map(eachLocation => {
+                {this.state.allMyLocations.map((eachLocation, i) => {
                 return(
-                  <div className="col-lg-3 col-md-4 col-xs-6">
+                  <div className="col-lg-3 col-md-4 col-xs-6" key={i}>
                     {/* MAKE SURE EACH PICTURE HAS A LINK TO THEIR LOCAITON SHOW PAGE*/}
                     {/* Look up template literals to get the value of eachLocation._id*/ }
                       <a href={`/locations/${eachLocation._id}`} className="d-block mb-4 h-100">

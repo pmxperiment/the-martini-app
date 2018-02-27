@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import IndexCategoryDrop from './IndexCategoryDrop';
 import AllLocations from './AllLocations';
-
+import PostALocation from './PostALocation';
 
 class Home extends Component {
   constructor() {
@@ -24,6 +24,7 @@ class Home extends Component {
           <div>
             <IndexCategoryDrop/>
           </div>
+          <PostALocation/>
           <AllLocations/>
           <div>
           </div>

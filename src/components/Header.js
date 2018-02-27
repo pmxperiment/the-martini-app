@@ -8,7 +8,7 @@ class Header extends Component{
         <Link to={'/home'}>Home</Link>
         <br />
         {/* <Link to={'/locations/:location_id'}>Locations</Link> */}
-        <Link to={'/users/:user_id'}>User</Link>
+        {/* <Link to={'/users/:user_id'}>User</Link> */}
       </header>
     )
   }

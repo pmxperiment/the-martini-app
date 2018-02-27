@@ -8,6 +8,9 @@ class Location extends Component {
     }
   }
   componentDidMount() {
+
+    //fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations/${this.props.match.params.location_id}`)
+
     // make a request to your API with the appropraite location id
     // FETCH to /api/locations/1.json
     // after fetching, set the state's location to be whatever you got back
@@ -15,8 +18,9 @@ class Location extends Component {
     fetch(`${REACT_APP_BACKEND_URL}/api/locations/${this.props.match.params.location_id}`)
     .then(res => res.json())
     .then((json) => {
+      console.log(this.props.match.params.location_id)
+      console.log(json)
       this.setState({location:json});
-      console.log(this.state.location);
     })
   }
 
@@ -25,13 +29,13 @@ class Location extends Component {
     // console.log(this.props.match.params.location_id)
     return (
 
-    <div>
-      <br />
-          <h1> {this.state.location.set_name}</h1>
-          <img src= { this.state.location.pic_url }/>
-        <h2> { this.state.location.daily_fee } Per Day </h2>
-        <h4> { this.state.location.description } </h4>
-    </div>
+      <div>
+        <br />
+            <h1> {this.state.location.set_name}</h1>
+            <img src= { this.state.location.pic_url }/>
+          <h2> { this.state.location.daily_fee } Per Day </h2>
+          <h4> { this.state.location.description } </h4>
+      </div>
     )
   }
 }
