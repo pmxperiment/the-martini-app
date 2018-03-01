@@ -9,10 +9,10 @@ class IndexCategoryDrop extends Component{
                 <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Film Set Categories
                 <span className="caret"></span></button>
                   <ul className="dropdown-menu">
-                      <li><a href="#">Homes & Residences</a></li>
-                      <li><a href="#">Businesses</a></li>
-                      <li><a href="#">Rural Areas</a></li>
-                      <li><a href="#">Miscellaneous</a></li>
+                      <li>Homes & Residences</li>
+                      <li>Businesses</li>
+                      <li>Rural Areas</li>
+                      <li>Miscellaneous</li>
                   </ul>
               </div>
             </div>
