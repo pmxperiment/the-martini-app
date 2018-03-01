@@ -24,10 +24,10 @@ class Location extends Component {
   }
 
 
-    onDelete(e){
+    onDelete(){
       fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations/${this.props.match.params.location_id}`,
       {
-        method: 'delete'
+        method: 'DELETE'
       }).then((response) => {
         this.props.history.push('/');
         console.log(response);
@@ -46,7 +46,7 @@ class Location extends Component {
           <h2> { this.state.location.daily_fee } </h2>
           <h3> { this.state.location.contact_info } </h3>
           <h4> { this.state.location.description } </h4>
-          <button className="btn btn-primary" onClick={e => this.onDelete(e)}>Delete</button>
+          <button className="btn btn-primary" onClick={e => this.onDelete()}>Delete</button>
 
       </div>
     )
