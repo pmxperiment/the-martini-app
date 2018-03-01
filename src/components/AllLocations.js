@@ -9,7 +9,7 @@ class AllLocations extends Component {
     }
   }
   componentDidMount() {
-    fetch(process.env.REACT_APP_BACKEND_URL + '/api/locations')
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations`)
         .then(res => res.json())
         .then(json => {
           this.setState({allMyLocations: json});
