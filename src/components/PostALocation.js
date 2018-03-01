@@ -1,44 +1,51 @@
 import React, { Component } from 'react';
 
 class PostALocation extends Component {
-  // constructor() {
-  //   super();
-	// 	this.state = {
-	// 		name: '',
-	// 		set_name: '',
-  //     category: '',
-  //     daily_fee: '',
-  //     pic_url:'',
-  //     description: ''
-	// 	}
-  //   this.onSubmit = this.onSubmit.bind(this);
-  // }
-  //
-  //
-  // onSubmit(e){
-  //   e.preventDefault();
-  //   // var _this = this;
-  //   fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations/`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //       name: this.state.name,
-  //       set_name: this.state.set_name,
-  //       category: this.state.category,
-  //       daily_fee: this.state.daily_fee,
-  //       pic_url: this.state.pic_url,
-  //       description: this.state.description
-  //       })
-  //     }).then((res) => {
-  //       return res.json()
-  //     }).then((json) => {
-  //       this.props.history.push('/api/locations');
-  //     })
-  //   }
-  //
+  constructor() {
+    super();
+		this.state = {
+			name: '',
+			set_name: '',
+      category: '',
+      daily_fee: '',
+      pic_url:'',
+      description: ''
+		}
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+
+  onSubmit(e){
+    //e.preventDefault();
+    console.log({
+      set_name: this.state.set_name,
+      category: this.state.category,
+      daily_fee: this.state.daily_fee,
+      pic_url: this.state.pic_url,
+      description: this.state.description
+      })
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations/`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        set_name: this.state.set_name,
+        category: this.state.category,
+        daily_fee: this.state.daily_fee,
+        pic_url: this.state.pic_url,
+        description: this.state.description
+        })
+      }).then((res) => {
+        console.log("server res: ", res)
+        return res.json()
+      }).then((json) => {
+        console.log("post test: ", json)
+        //this.props.history.push('/locations');
+      })
+    }
+
 
 
   render() {
@@ -54,48 +61,55 @@ class PostALocation extends Component {
                 <h3>Film Set Form</h3>
                 <div id="newLoc_form">
 
-                <form id="postLocation" action="http://localhost:8080/api/locations/">
+                <form id="postLocation" >
+
                   <label>Name:</label>
-                  <input name="name" placeholder= 'Name'/>
+                  <input name="name" placeholder= 'Name'
+                  value={this.state.name}
+                  onChange={e => this.setState({ name: e.target.value})}
+                  />
                   <br />
 
                   <label>Film Set Name:</label>
-                  <input name="filmSetName" placeholder= 'Film Set Name'/>
+                  <input name="filmSetName" placeholder= 'Film Set Name'
+                  value={this.state.set_name}
+                  onChange={e => this.setState({ set_name: e.target.value})}
+                  />
                   <br />
 
                   <label>Category:</label>
-                  <input name="category" placeholder= 'Category'/>
+                  <input name="category" placeholder= 'Category'
+                  value={this.state.category}
+                  onChange={e => this.setState({ category: e.target.value })}
+                  />
                   <br />
 
                   <label>Daily Fee:</label>
-                  <input name="dailyfee" placeholder= 'Daily Fee'/>
+                  <input name="dailyfee" placeholder= 'Daily Fee'
+                  value={this.state.daily_fee}
+                  onChange={e => this.setState({ daily_fee: e.target.value })}
+                  />
                   <br />
 
                   <label>Pic URL:</label>
-                  <input name="picURL" placeholder= 'Pic URL'/>
+                  <input name="picURL" placeholder= 'Pic URL'
+                  value={this.state.pic_url}
+                  onChange={e => this.setState({ pic_url: e.target.value})}
+                  />
                   <br />
 
                   <label>Location Description:</label>
-                  <input name="description" placeholder= 'Describe your film set..'/>
+                  <input name="description" placeholder= 'Describe your film set..'
+                  value={this.state.description}
+                  onChange={e => this.setState({ description: e.target.value })}
+                  />
                   <br />
-                  <button className="getInfo" type="submit">Submit</button>
+                  <button className="btn btn-primary" onClick={e => this.onSubmit(e)}>Submit</button>
 
                 </form>
             </div>
         </div>
       </div>
-    {/* <script>
-      document.getElementById('getInfo').addEventlistener
-      ('click', getInfo);
-
-      function getInfo(){
-       fetch('location.json')
-      .then(res) => res.json())
-      .then((data) => console.log(data))
-    }
-
-    </script> */}
-
       </div>
     );
   }

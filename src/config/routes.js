@@ -12,7 +12,7 @@ import IndexCategoryDrop from '../components/IndexCategoryDrop';
 
 export default (
   <Switch>
-    <Route exact path='/home' component={ Home }/>
+    <Route exact path='/' component={ Home }/>
     <Route path='/locations/:location_id' component={ Location }/>
     <Route path='/users/:user_id' component={ User }/>
  </Switch>
