@@ -17,11 +17,11 @@ class Home extends Component {
      //fetch(REACT_APP_BACKEND_URL + '/api/users').then((res) => {
 
     //line below activate when using heroku!
-    //fetch(process.env.REACT_APP_BACKEND_URL + '/api/users').then((res) => {
+    fetch(process.env.REACT_APP_BACKEND_URL + '/api/users').then((res) => {
 
     //or?
 
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`).then((res) => {
+    //fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users`).then((res) => {
 
     }).then((json) => {
       this.setState({Users:json});
