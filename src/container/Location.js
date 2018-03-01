@@ -44,6 +44,7 @@ class Location extends Component {
             <h1> {this.state.location.set_name}</h1>
             <img src= { this.state.location.pic_url }/>
           <h2> { this.state.location.daily_fee } </h2>
+          <h3> { this.state.location.contact_info } </h3>
           <h4> { this.state.location.description } </h4>
           <button className="btn btn-primary" onClick={e => this.onDelete(e)}>Delete</button>
 

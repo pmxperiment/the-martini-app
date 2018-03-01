@@ -13,11 +13,11 @@ class Home extends Component {
   componentDidMount() {
 
     //lines below run when testing in local environment
-    //const REACT_APP_BACKEND_URL = 'http://localhost:8080';
-    //fetch(REACT_APP_BACKEND_URL + '/api/users').then((res) => {
+    const REACT_APP_BACKEND_URL = 'http://localhost:8080';
+    fetch(REACT_APP_BACKEND_URL + '/api/users').then((res) => {
 
     //line below activate when using heroku
-     fetch(process.env.REACT_APP_BACKEND_URL + '/api/users').then((res) => {
+     //fetch(process.env.REACT_APP_BACKEND_URL + '/api/users').then((res) => {
     }).then((json) => {
       this.setState({Users:json});
       console.log(this.setState.Users);

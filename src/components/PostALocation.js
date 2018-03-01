@@ -9,6 +9,7 @@ class PostALocation extends Component {
       category: '',
       daily_fee: '',
       pic_url:'',
+      contact_info: '',
       description: ''
 		}
     this.onSubmit = this.onSubmit.bind(this);
@@ -22,6 +23,7 @@ class PostALocation extends Component {
       category: this.state.category,
       daily_fee: this.state.daily_fee,
       pic_url: this.state.pic_url,
+      contact_info: this.state.contact_info,
       description: this.state.description
       })
     fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations/`, {
@@ -35,6 +37,7 @@ class PostALocation extends Component {
         category: this.state.category,
         daily_fee: this.state.daily_fee,
         pic_url: this.state.pic_url,
+        contact_info: this.state.contact_info,
         description: this.state.description
         })
       }).then((res) => {
@@ -95,6 +98,13 @@ class PostALocation extends Component {
                   <input name="picURL" placeholder= 'Pic URL'
                   value={this.state.pic_url}
                   onChange={e => this.setState({ pic_url: e.target.value})}
+                  />
+                  <br />
+
+                  <label>Contact Info:</label>
+                  <input name="picURL" placeholder= 'Contact Info'
+                  value={this.state.contact_info}
+                  onChange={e => this.setState({ contact_info: e.target.value})}
                   />
                   <br />
 
