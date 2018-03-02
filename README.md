@@ -1,3 +1,45 @@
+MARTINI
+The inspiration for Martini came from me looking to do freelance videography but not being able to either find a scene location on time or at a specified budget.
+Martini is an web service that allows filmmakers search for film sets in the palm of their hand. This works with a wide arrange of film budgets and makes it simple to find a film location in unfamiliar cities. It could also be a way to help people promote/sell their properties and businesses by having them in the eyes of the public.
+
+Front End Technologies:
+HTML / CSS / JS
+BOOTSTRAP
+REACT.JS
+
+Back End Technologies:
+NODE.JS
+MONGO DB
+
+USER STORIES:
+INDEX PAGE
+User is sent to the index page. There is a drop down menu which consists the location categories, The rest of the index page is populated with available film locations.
+
+USER PROFILE PAGE
+If a user clicks the profile button they will be sent to their profile.
+Their profile consists of a picture of the user and their name on the top left portion of the page.
+The rest of the index page is populated with that users particular available film locations.
+
+SINGLE LOCATION FOR RENT PAGE
+A picture of that location along with price and description.
+A RENT button sends a request to rent the location (future(
+
+POST LOCATION FOR RENT MODAL
+There is a post button that opens a modal and allows the user fill out a form which will post a new location for rent. It  will have a dropdown menu consisting of the categories, A geographical dropdown menu, a price drop down menu, followed by an input box used to write descriptions of the location.
+
+ERD:
+MANY TO MANY RELATIONSHIPS
+
+One User can have many Locations
+One Location can have many Bookings
+
+
+Future Features:
+-Create Booking Table
+-Auth and Login
+-Messaging Implementation
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -300,7 +342,7 @@ In the WebStorm menu `Run` select `Edit Configurations...`. Then click `+` and s
 
 Start your app by running `npm start`, then press `^D` on macOS or `F9` on Windows and Linux or click the green debug icon to start debugging in WebStorm.
 
-The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine. 
+The same way you can debug your application in IntelliJ IDEA Ultimate, PhpStorm, PyCharm Pro, and RubyMine.
 
 ## Formatting Code Automatically
 
@@ -1989,7 +2031,7 @@ If you’re using [Apache HTTP Server](https://httpd.apache.org/), you need to c
     RewriteRule ^ index.html [QSA,L]
 ```
 
-It will get copied to the `build` folder when you run `npm run build`. 
+It will get copied to the `build` folder when you run `npm run build`.
 
 If you’re using [Apache Tomcat](http://tomcat.apache.org/), you need to follow [this Stack Overflow answer](https://stackoverflow.com/a/41249464/4878474).
 
@@ -2419,7 +2461,7 @@ To resolve this:
 1. Open an issue on the dependency's issue tracker and ask that the package be published pre-compiled.
   * Note: Create React App can consume both CommonJS and ES modules. For Node.js compatibility, it is recommended that the main entry point is CommonJS. However, they can optionally provide an ES module entry point with the `module` field in `package.json`. Note that **even if a library provides an ES Modules version, it should still precompile other ES6 features to ES5 if it intends to support older browsers**.
 
-2. Fork the package and publish a corrected version yourself. 
+2. Fork the package and publish a corrected version yourself.
 
 3. If the dependency is small enough, copy it to your `src/` folder and treat it as application code.
 
