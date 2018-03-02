@@ -8,12 +8,6 @@ class Location extends Component {
     }
   }
   componentDidMount() {
-
-    //fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations/${this.props.match.params.location_id}`)
-
-    // make a request to your API with the appropraite location id
-    // FETCH to /api/locations/1.json
-    // after fetching, set the state's location to be whatever you got back
     fetch(`${process.env.REACT_APP_BACKEND_URL}/api/locations/${this.props.match.params.location_id}`)
     .then(res => res.json())
     .then((json) => {
